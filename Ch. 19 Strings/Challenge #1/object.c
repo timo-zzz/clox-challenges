@@ -24,7 +24,7 @@ static ObjString* allocateString(char* chars, int length) {
     ObjString* string = (ObjString*)allocateObject(sizeof(ObjString) + ((length + 1) * sizeof(char)), OBJ_STRING);
     string->length = length;
     memcpy(string->chars, chars, length);
-    string->chars[length] = '\0';
+    string->chars[length] = '\0'; // WHY??????? WHY DO I NEED THIS NULL TERMINATOR???????????
     return string;
 }
 
